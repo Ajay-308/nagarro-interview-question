@@ -1,0 +1,35 @@
+Let's think about index 1 and index 2 cases.
+
+From index 1, We have three choices. Jump to index 2, 3 or 4.
+From index 2, We have one choice. Jump to index 3.
+
+⭐️　Points
+
+Important thing is that farthest position(= index 2) from previous jump position(= index 0) is not always following the next farthest position.
+
+From index 0, the farthest position should be index 2, because maximum jump from index 0 is 2. But if we jump from index 2, we can jump to the next position(= index 3).
+
+On the other hand, if we jump to index 1 from index 0, we can jump to index 4 from index 1. which is farther than index 3 from index 2.
+
+So my strategy is to have near and far position and we check all jumps between the positions and get the farthest position every time.
+
+
+
+
+class Solution:
+    def jump(self, nums: list[int]) -> int:
+        n = len(nums)
+
+        # Preprocess: store max reach from 0 to i at each index
+        for i in range(1, n):
+            nums[i] = max(nums[i] + i, nums[i - 1])
+
+        ind = 0
+        ans = 0
+
+        # Follow the precomputed jumps
+        while ind < n - 1:
+            ans += 1
+            ind = nums[ind]
+
+        return ans
