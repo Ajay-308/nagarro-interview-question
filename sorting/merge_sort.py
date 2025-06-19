@@ -29,3 +29,8 @@ def merge_sort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
+
+arr = [5, 3, 8, 4, 2, 1]
+merge_sort(arr)
+print(arr)  # [1, 2, 3, 4, 5, 8]
+
