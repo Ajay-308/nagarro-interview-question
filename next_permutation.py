@@ -17,3 +17,6 @@ class Solution:
             nums[i - 1], nums[index] = nums[index], nums[i - 1]
         nums[i:] = reversed(nums[i:])
 
+
+# python and here in c++
+# nums[i:] ==reverse(nums.begin() + i, nums.end());
