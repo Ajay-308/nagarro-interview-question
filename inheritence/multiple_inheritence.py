@@ -1,6 +1,8 @@
 class Father:
     def show_father(self):
         print("This is the father.")
+    def call(self):
+        print("calling it from child to father")
 
 class Mother:
     def show_mother(self):
@@ -11,6 +13,6 @@ class Child(Father, Mother):  # Multiple inheritance
         print("This is the child.")
 
 c = Child()
-c.show_father()
+c.call()
 c.show_mother()
 c.show_child()

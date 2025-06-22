@@ -4,7 +4,7 @@ class Student:
 
     def set_marks(self, m):   # setter
         if m >= 0 and m <= 100:
-            self.__marks = m
+           self.__marks = m
         else:
             print("Invalid marks")
 
@@ -15,8 +15,8 @@ class King(Student):
     pass
 
 s = Student()
-s.set_marks(90)         # ✅ safe
-print(s.get_marks())    # ✅ 90
+s.set_marks(90)        
+print(s.get_marks())   
 k = King()
 k.set_marks(30)
 print(k.get_marks())

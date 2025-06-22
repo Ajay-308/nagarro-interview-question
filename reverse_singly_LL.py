@@ -15,8 +15,6 @@ def reverse_linked_list(head):
         current = next_node       # Move current forward
 
     return prev
-
-# Helper function to print linked list
 def print_linked_list(head):
     current = head
     while current:
