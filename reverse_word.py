@@ -1,5 +1,6 @@
 s = "my name is ajay"
 words = s.split()  
+print(words)
 
 result = ""
 for word in words:
