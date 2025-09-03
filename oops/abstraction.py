@@ -16,3 +16,6 @@ class Car(Vehicle):
 class Bike(Vehicle):
     def start(self):
         print("Bike started with a button 🔘")
+
+d = Car()
+d.start()
