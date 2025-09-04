@@ -1,0 +1,37 @@
+1. Recursive traversals (inOrderRecursive, preOrderRecursive, postOrderRecursive)
+
+Each node is visited exactly once.
+
+Work per node = constant (push_back + recursion calls).
+
+✅ Time Complexity: O(n)
+✅ Space Complexity: O(h) (recursion stack, where h = tree height). Worst-case O(n) for skewed tree, best/avg O(log n) for balanced tree.
+
+2. Iterative Inorder (inOrderIterative)
+
+Each node is pushed and popped from stack exactly once.
+
+Constant work per node.
+
+✅ Time Complexity: O(n)
+✅ Space Complexity: O(h) (stack stores path to current node).
+
+3. Iterative Preorder (preOrderIterative)
+
+Each node is pushed and popped once.
+
+Constant work per node.
+
+✅ Time Complexity: O(n)
+✅ Space Complexity: O(h) (stack can store at most h nodes, worst-case O(n)).
+
+4. Iterative Postorder (postOrderIterative, with reverse at end)
+
+Each node is pushed into stack once.
+
+Each node is appended to result once.
+
+At the end, reverse() costs O(n).
+
+✅ Time Complexity: O(n) (visiting + reverse still O(n))
+✅ Space Complexity: O(h) for stack + O(n) for result. Worst-case O(n).

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <algorithm>
 using namespace std;
 
 // Node class
@@ -79,21 +80,16 @@ void preOrderIterative(Node* root, vector<int>& arr) {
 void postOrderIterative(Node* root, vector<int>& arr) {
     if (root == nullptr) return;
 
-    stack<Node*> st1, st2;
-    st1.push(root);
+    stack<Node*> st;
+    st.push(root);
 
-    while (!st1.empty()) {
-        Node* node = st1.top(); st1.pop();
-        st2.push(node);
-
-        if (node->left) st1.push(node->left);
-        if (node->right) st1.push(node->right);
+    while (!st.empty()) {
+        Node* node = st.top(); st.pop();
+        if (node->left) st.push(node->left);
+        if (node->right) st.push(node->right);
+        arr.push_back(node->data);
     }
-
-    while (!st2.empty()) {
-        arr.push_back(st2.top()->data);
-        st2.pop();
-    }
+    reverse(arr.begin(), arr.end());
 }
 
 // ---------------- Main ----------------
