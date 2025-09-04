@@ -17,6 +17,7 @@ public:
 };
 
 // Inorder traversal function
+// left root  right
 void inOrder(Node* root, vector<int>& arr) {
     if (root == nullptr) return;
 

@@ -16,6 +16,8 @@ public:
 };
 
 // Preorder Traversal (Recursive)
+// root left right
+
 void preOrderRecursive(Node* root, vector<int>& arr) {
     if (root == nullptr) return;
     arr.push_back(root->data);            // Visit root

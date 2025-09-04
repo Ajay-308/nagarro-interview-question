@@ -17,6 +17,7 @@ public:
 };
 
 // Postorder traversal function
+// left right root
 void postOrder(Node* root, vector<int>& arr) {
     if (root == nullptr) return;
 
