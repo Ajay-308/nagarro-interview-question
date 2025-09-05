@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
-        uint32_t result = 0;
+        uint32_t result = 0; // int can be 32 bit and 64 bit but this guarnetees 32 bits
         
         for (int i = 0; i < 32; i++) {
             int bit = (n >> i) & 1;            // extract i-th bit
