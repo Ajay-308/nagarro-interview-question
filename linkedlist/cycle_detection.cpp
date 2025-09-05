@@ -31,7 +31,10 @@ Node* cycleStart(Node* head) {
             while (slow != fast) {
                 slow = slow->next;
                 fast = fast->next;
+
             }
+            cout <<"cycle entry point is at node with value: "<< slow->data << "\n";
+
             return slow;
         }
     }
