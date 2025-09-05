@@ -1,3 +1,7 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
 class MyQueue {
 public:
     stack<int> s;
@@ -38,3 +42,32 @@ public:
         return s.empty() && p.empty();
     }
 };
+
+
+int main() {
+    MyQueue q;
+    q.push(1);
+    q.push(2);
+    cout << q.peek() << endl; // returns 1
+    cout << q.pop() << endl;  // returns 1
+    cout << q.empty() << endl; // returns false
+    return 0;
+}
+
+
+// 🔹 Overall Complexity
+
+// Amortized Time Complexity:
+
+// push: O(1)
+
+// pop: O(1) (amortized, worst O(n))
+
+// peek: O(1) (amortized, worst O(n))
+
+// empty: O(1)
+
+// Space Complexity:
+
+// Two stacks, together holding n elements at most.
+// ✅ O(n)
