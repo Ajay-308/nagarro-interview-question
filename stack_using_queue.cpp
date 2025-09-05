@@ -76,3 +76,15 @@ int main() {
     st.push(4);
     cout << "Top: " << st.top() << endl;   // 4
 }
+
+// 🔹 Overall Complexity
+
+// Push → O(n)
+
+// Pop → O(1)
+
+// Top → O(1)
+
+// Empty → O(1)
+
+// Space Complexity → O(n) (only one queue holding all elements).
